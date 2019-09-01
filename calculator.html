@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Simple Javascript Calculator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="calculator.css" />
+    <script>
+        function clearScreen(){
+            result.inputs.value= "";
+            result.ans.value="";
+        }
+    </script>
+</head>
+<body>
+    <head>
+        <h1>Simple Calculator</h1>
+    </head>
+    <main>
+        <div class="container">
+            <table>
+                <form name="result" id="result">
+                    <tr>
+                        <td colspan="4">
+                            <input type="text" id="inputs" disabled>
+                            <input type="text" id="ans" disabled>
+                        </td>
+                    </tr>
+                </form>
+                    <tr>
+                        <td>
+                            <button onclick="result.inputs.value +='1'">1</button>
+                        </td>
+                        <td>
+                            <button onclick="result.inputs.value +='2'">2</button>
+                        </td>
+                        <td>
+                            <button onclick="result.inputs.value +='3'">3</button>
+                        </td>
+                        <td>
+                            <button onclick="result.inputs.value +='+'">+</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button onclick="result.inputs.value +='4'">4</button>
+                        </td>
+                        <td>
+                            <button onclick="result.inputs.value +='5'">5</button>
+                        </td>
+                        <td>
+                            <button onclick="result.inputs.value +='6'">6</button>
+                        </td>
+                        <td>
+                            <button onclick="result.inputs.value +='-'">-</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button onclick="result.inputs.value +='7'">7</button>
+                        </td>
+                        <td>
+                            <button onclick="result.inputs.value +='8'">8</button>
+                        </td>
+                        <td>
+                            <button onclick="result.inputs.value +='9'">9</button>
+                        </td>
+                        <td>
+                            <button onclick="result.inputs.value +='*'">x</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button onclick="result.inputs.value +='.'">.</button>
+                        </td>
+                        <td>
+                            <button onclick="result.inputs.value +='0'">0</button>
+                        </td>
+                        <td>
+                            <button onclick="clearScreen()" id="clear">AC</button>
+                        </td>
+                        <td>
+                            <button onclick="result.inputs.value +='/'">/</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="4">
+                            <button onclick="result.ans.value='Ans= '+eval(result.inputs.value)" id="equal">=</button>
+                        </td>
+                    </tr>
+            </table>
+        </div>
+    </main>
+</body>
+</html>
